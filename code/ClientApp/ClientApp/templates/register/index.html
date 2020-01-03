@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Validation</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"> {% load static %}
+    <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="card">
+                    <h4 class="card-header text-center">Login</h4>
+                    <div class="card-block">
+                        <form method="post" action="/login">
+                            {% csrf_token %}
+                            <div class="mx-auto text-center">
+                                <input type="submit" value="Login with DevAuth" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+</body>
+
+</html>

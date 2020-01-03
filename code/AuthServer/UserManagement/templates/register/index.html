@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dev Auth</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"> {% load static %}
+    <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+<script>
+    var url = window.location.href.split('/');
+    var request_url = "/user/login/" + url[url.length-2].toString();
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("formtag").setAttribute("action", request_url);
+    });
+</script>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="card">
+                    <h4 class="card-header text-center">DevAuth Login</h4>
+                    <div class="card-block">
+                        <form id="formtag" method="post" action="">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input name="login_email" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input name="login_password" type="password" class="form-control">
+                            </div>
+                            <div class="mx-auto text-center">
+                                <input type="submit" value="Login" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+</body>
+
+</html>

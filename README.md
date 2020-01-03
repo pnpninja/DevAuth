@@ -1,0 +1,1 @@
+# DevAuth :  A new way for authorizing access to data instead of OAuth
